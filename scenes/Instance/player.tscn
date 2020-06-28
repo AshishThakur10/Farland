@@ -21,3 +21,11 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.836243, 15.4704 )
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_bottom = 700
+smoothing_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
