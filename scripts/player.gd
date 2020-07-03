@@ -4,6 +4,7 @@ var velocity = Vector2(0,0)
 var Gravity= 18
 var Speed = 300
 var jumpforce = 700
+var coin = 0
 
 func  _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
@@ -31,3 +32,7 @@ func  _physics_process(delta):
 
 func _on_fallzone_body_entered(body: Node) -> void:
 	get_tree().change_scene("res://scenes/Levels/Level1.tscn")
+
+func add_coin():
+	coin = coin + 1
+	pass
