@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/UI/StartButton.gd" type="Script" id=1]
+[ext_resource path="res://Assest/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 84
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.333333, 0.486275, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 36.9098
+margin_bottom = 138.91
+custom_fonts/font = SubResource( 1 )
+text = "Farland"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.499
+anchor_top = 0.427
+anchor_right = 0.499
+anchor_bottom = 0.427
+margin_left = -156.976
+margin_top = -5.20001
+margin_right = 158.024
+margin_bottom = 81.8
+text = "Play"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]

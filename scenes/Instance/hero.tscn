@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assest/enemies-sprites/hero_spritesheet.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "New Anim"
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/New Anim" = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 8
+frame = 11

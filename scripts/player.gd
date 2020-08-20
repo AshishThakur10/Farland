@@ -36,3 +36,17 @@ func _on_fallzone_body_entered(body: Node) -> void:
 func add_coin():
 	coin = coin + 1
 	pass
+
+func bounce():
+	velocity.y = jumpforce * 0.7
+	pass
+
+func ouch(var enemyposx):
+	set_modulate(Color(1,0.3,0.3,0.3))
+	if position.x < enemyposx:
+		velocity.x = -500
+	elif position.x > enemyposx:
+		velocity.x = 500
+	
+	Input.action_release("ui_left")
+	Input.action_release("ui_right")
