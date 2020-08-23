@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/UI/StartButton.gd" type="Script" id=1]
+[ext_resource path="res://scenes/UI/MainMenuButton.gd" type="Script" id=1]
 [ext_resource path="res://Assest/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assest/audio/music/Swinging Pants.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -18,11 +17,7 @@ outline_size = 2
 outline_color = Color( 0.133333, 0.627451, 0.105882, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 25
-font_data = ExtResource( 2 )
-
-[node name="MainMenu" type="Control"]
+[node name="GameOver" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -32,7 +27,9 @@ __meta__ = {
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0941176, 0.192157, 0.298039, 1 )
+margin_top = -2.65002
+margin_bottom = -2.65002
+color = Color( 0.4, 0.176471, 0.164706, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -40,50 +37,38 @@ __meta__ = {
 [node name="Title" type="Label" parent="."]
 material = SubResource( 1 )
 anchor_right = 1.0
-margin_top = 36.9098
-margin_bottom = 138.91
+margin_left = -2.39166
+margin_top = 17.7766
+margin_right = -2.39166
+margin_bottom = 147.777
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.780392, 0.831373, 0.894118, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.329412, 0.054902, 0.054902, 1 )
 custom_constants/shadow_offset_y = 6
-text = "Farland"
+text = "Game Over"
 align = 1
+valign = 1
+uppercase = true
+percent_visible = -0.125
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StartButton" type="Button" parent="."]
-anchor_left = 0.348
-anchor_top = 0.427
-anchor_right = 0.656
-anchor_bottom = 0.616
-margin_left = 0.2966
-margin_top = 11.4556
-margin_right = -0.0953979
-margin_bottom = -0.944458
+[node name="MainMenu" type="Button" parent="."]
+anchor_left = 0.498
+anchor_top = 0.655
+anchor_right = 0.498
+anchor_bottom = 0.655
+margin_left = -205.344
+margin_top = -0.232758
+margin_right = 204.656
+margin_bottom = 101.767
 custom_fonts/font = SubResource( 3 )
-text = "Play"
+text = "Main Menu"
 flat = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="version" type="Label" parent="."]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_top = -45.0
-margin_right = 185.0
-custom_fonts/font = SubResource( 4 )
-text = "vr 1.0.1"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MusiceMainMenu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = -6.71
-autoplay = true
-[connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_MainMenu_pressed"]

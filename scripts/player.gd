@@ -21,17 +21,17 @@ func  _physics_process(delta):
 	if not is_on_floor():
 		$AnimatedSprite.play("jump")
 	
+	
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = -jumpforce
-		
+		$SoundJump.play()
+	
 	velocity.x = lerp(velocity.x,0,0.2)
 	velocity.y = velocity.y + Gravity
-	
 	velocity = move_and_slide(velocity,Vector2.UP)
 
-
 func _on_fallzone_body_entered(body: Node) -> void:
-	get_tree().change_scene("res://scenes/Levels/Level1.tscn")
+	get_tree().change_scene("res://scenes/UI/GameOver.tscn")
 
 func add_coin():
 	coin = coin + 1

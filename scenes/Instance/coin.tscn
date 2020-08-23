@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assest/coin/gold_2.png" type="Texture" id=1]
 [ext_resource path="res://Assest/coin/gold_1.png" type="Texture" id=2]
 [ext_resource path="res://Assest/coin/gold_3.png" type="Texture" id=3]
 [ext_resource path="res://scripts/Objects/coin.gd" type="Script" id=4]
+[ext_resource path="res://Assest/audio/sounds/powerUp2.ogg" type="AudioStream" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 44.0114
@@ -45,5 +46,8 @@ animation = "spin"
 
 [node name="coin_animation" type="AnimationPlayer" parent="."]
 anims/bounce = SubResource( 3 )
+
+[node name="soundCoin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="body_entered" from="." to="." method="_on_coin_body_entered"]
 [connection signal="animation_finished" from="coin_animation" to="." method="_on_coin_animation_finished"]
