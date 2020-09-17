@@ -50,7 +50,6 @@ text = "Game Over"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = -0.125
 __meta__ = {
 "_edit_use_anchors_": false
 }

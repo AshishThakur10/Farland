@@ -23,7 +23,6 @@ func _physics_process(delta: float) -> void:
 	velocity = move_and_slide(velocity,Vector2.UP)
 	pass
 
-
 func _on_top_checker_body_entered(body: Node) -> void:
 	$AnimatedSprite.play("squashed")
 	$squash.play()
@@ -38,12 +37,9 @@ func _on_top_checker_body_entered(body: Node) -> void:
 	body.bounce()
 	pass
 
-
 func _on_side_checker_body_entered(body: Node) -> void:
 	print('hit')
 	body.ouch(position.x)
 
-
 func _on_Timer_timeout() -> void:
 	queue_free()
-
