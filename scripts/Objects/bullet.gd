@@ -6,7 +6,7 @@ func _ready():
 	apply_impulse(Vector2(),Vector2(bullet_speed,0))
 	$Bullet_Timer.start()
 	pass 
-func ouch(var enemyposx):
+func ouch(var enemyposx,damage):
 	queue_free()
 
 	pass

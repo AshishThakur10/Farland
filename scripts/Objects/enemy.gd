@@ -3,6 +3,7 @@ var velocity = Vector2()
 var speed = 50
 export var direction = 1
 export var detects_cliffs = true
+var damage = 20
 
 func _ready() -> void:
 	if direction == 1 :
@@ -23,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	velocity = move_and_slide(velocity,Vector2.UP)
 	pass
 
-func _on_top_checker_body_entered(body: Node) -> void:
+func on_top_checker_body_entered(body: Node) -> void:
 	$AnimatedSprite.play("squashed")
 	$squash.play()
 	speed = 0
@@ -34,12 +35,15 @@ func _on_top_checker_body_entered(body: Node) -> void:
 	$side_checker.set_collision_layer_bit(4,false)
 	$side_checker.set_collision_mask_bit(0,false)
 	$Timer.start()
-	body.bounce()
+	if body.name == "bullet":
+		body.bounce()
 	pass
 
 func _on_side_checker_body_entered(body: Node) -> void:
 	print('hit')
-	body.ouch(position.x)
+	body.ouch(position.x,damage)
+	if body.name == "bullet":
+		on_top_checker_body_entered(body)
 
 func _on_Timer_timeout() -> void:
 	queue_free()

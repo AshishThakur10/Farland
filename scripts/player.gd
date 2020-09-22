@@ -6,11 +6,18 @@ var Gravity= 18
 var Speed = 300
 var jumpforce = 700
 var coin = 0
+var current
+var max_hp = 100
+var car = true
+
+func _ready():
+	current = max_hp
 
 func  _physics_process(delta):
 	Shoot()
-	player_movemen()
+	player_movemen() 
 	jump()
+	monstarcar()
 
 func player_movemen():
 	if Input.is_action_pressed("ui_left"):
@@ -19,6 +26,7 @@ func player_movemen():
 		$AnimatedSprite.flip_h = true
 		$turn.rotation_degrees = 180
 		$AnimatedSprite.play("walk")
+#		$turn.set_rotation_degrees(180)
 
 	elif Input.is_action_pressed("ui_right"):
 		
@@ -49,9 +57,12 @@ func add_coin():
 
 func bounce():
 	velocity.y = jumpforce * 0.7
+	
+	
 	pass
 
-func ouch(var enemyposx):
+func ouch(var enemyposx,damage):
+	$Timer.start()
 	set_modulate(Color(1,0.3,0.3,0.3))
 	if position.x < enemyposx:
 		velocity.x = -500
@@ -60,12 +71,38 @@ func ouch(var enemyposx):
 	
 	Input.action_release("ui_left")
 	Input.action_release("ui_right")
+	current -= damage
+	get_node("CanvasLayer/HealthBar2").value = int(float(current)/max_hp*100)
+	if current == 0:
+		queue_free()
 
 func Shoot():
-	var timer = $bullet_timer
 	var bullet_instance = bullet.instance()
 	if Input.is_action_just_pressed("Fire"):
 		print('fire')
 		bullet_instance.position = $turn/aim.get_global_position()
 		get_parent().add_child(bullet_instance)
 	pass
+
+func monstarcar():
+	if Input.is_action_just_pressed("ui_accept"):
+		car = true
+		$monstarcar.set_visible(car) 
+	if Input.is_action_just_pressed("ui_cancel"):
+		car = false
+		$monstarcar.set_visible(car)
+
+func _on_Health_depleted():
+	
+	
+	die()
+	pass 
+func die():
+	
+	queue_free()
+	pass
+
+
+func _on_Timer_timeout():
+	set_modulate(Color(1,1,1,1))
+	pass 
