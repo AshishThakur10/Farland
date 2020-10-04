@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assest/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assest/fonts/levels_text.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/Objects/Levels.gd" type="Script" id=3]
+[ext_resource path="res://Assest/background/PNG/game_background_3/game_background_3.1.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -16,13 +17,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Panel" parent="."]
-modulate = Color( 0.976471, 0.960784, 0.960784, 1 )
-self_modulate = Color( 0.415686, 0.556863, 0.976471, 1 )
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -4.23785
-margin_bottom = -4.23785
+texture = ExtResource( 4 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,13 +40,16 @@ __meta__ = {
 }
 
 [node name="level1" type="Button" parent="."]
+anchor_left = 0.0246078
 anchor_top = 0.5
+anchor_right = 0.0246078
 anchor_bottom = 0.5
 margin_top = -76.5
 margin_right = 254.0
 margin_bottom = 76.5
 custom_fonts/font = ExtResource( 2 )
 text = "Level 1"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -63,6 +65,7 @@ margin_right = 127.0
 margin_bottom = 70.5
 custom_fonts/font = ExtResource( 2 )
 text = "Level 2"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -72,11 +75,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -254.0
-margin_top = -78.0
-margin_bottom = 78.0
+margin_left = -289.278
+margin_top = -74.2202
+margin_right = -35.2777
+margin_bottom = 81.7798
 custom_fonts/font = ExtResource( 2 )
 text = "Level 3"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -84,10 +89,13 @@ __meta__ = {
 [node name="level4" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -151.0
-margin_right = 254.0
+margin_left = 27.7183
+margin_top = -182.498
+margin_right = 281.718
+margin_bottom = -31.498
 custom_fonts/font = ExtResource( 2 )
 text = "Level 4"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,11 +105,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -127.0
-margin_top = -141.0
-margin_right = 127.0
+margin_left = -128.26
+margin_top = -177.538
+margin_right = 125.74
+margin_bottom = -36.5377
 custom_fonts/font = ExtResource( 2 )
 text = "Level 5"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,10 +121,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -254.0
-margin_top = -142.0
+margin_left = -282.978
+margin_top = -186.097
+margin_right = -28.9781
+margin_bottom = -44.0973
 custom_fonts/font = ExtResource( 2 )
 text = "Level 6"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -124,8 +137,14 @@ margin_right = 131.0
 margin_bottom = 39.0
 custom_fonts/font = ExtResource( 2 )
 text = "Back"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 [connection signal="pressed" from="level1" to="." method="_on_level1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level2_pressed"]
+[connection signal="pressed" from="level3" to="." method="_on_level3_pressed"]
+[connection signal="pressed" from="level4" to="." method="_on_level4_pressed"]
+[connection signal="pressed" from="level5" to="." method="_on_level5_pressed"]
+[connection signal="pressed" from="level6" to="." method="_on_level6_pressed"]
 [connection signal="pressed" from="Main_Manu" to="." method="_on_Main_Manu_pressed"]

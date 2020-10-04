@@ -48,4 +48,3 @@ func _on_side_checker_body_entered(body: Node) -> void:
 func _on_Timer_timeout() -> void:
 	queue_free()
 
-

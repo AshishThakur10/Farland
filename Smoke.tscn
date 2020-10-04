@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://smoke1.png" type="Texture" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0.0537125, 0.55 ), 0.0, 0.0, 0, 0, Vector2( 0.410742, 0.822727 ), 0.0, 0.0, 0, 0, Vector2( 0.816746, 0.513636 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.901367, 0.895219, 0.880241, 1, 0.963867, 0.963867, 0.963867, 1 )
+
+[node name="Smoke" type="CPUParticles2D"]
+rotation = -1.5708
+emitting = false
+amount = 1397
+lifetime = 41.99
+speed_scale = 1.19
+lifetime_randomness = 1.0
+texture = ExtResource( 1 )
+direction = Vector2( 0, 0 )
+spread = 14.41
+gravity = Vector2( 0, 0 )
+initial_velocity = 497.89
+initial_velocity_random = 0.72
+angular_velocity = 232.55
+angular_velocity_random = 1.0
+linear_accel = 3.11
+damping = 1.55
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.5
+hue_variation_random = 1.0

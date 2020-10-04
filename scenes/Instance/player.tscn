@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Assest/player-sprites/player-sprite.tres" type="SpriteFrames" id=2]
@@ -7,41 +7,55 @@
 [ext_resource path="res://scripts/Objects/Health.gd" type="Script" id=5]
 [ext_resource path="res://Assest/objects/monstarcar.png" type="Texture" id=6]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 25.0701
-height = 15.107
+[sub_resource type="ShaderMaterial" id=1]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 9.32181
+height = 31.4382
+
+[sub_resource type="Curve" id=3]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0.00862069, 53.1818 ), 0.0, 0.0, 0, 0, Vector2( 0.797414, -53.1818 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0.12069, 0.963636 ), 0.0, 0.0, 0, 0, Vector2( 0.508621, 0.654545 ), 0.0, 0.0, 0, 0, Vector2( 0.905172, 0.290909 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 1, 0.999023, 0, 1, 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.286275, 0.847059, 0.203922, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.941176, 0.941176, 0.941176, 0.337255 )
 
 [node name="player" type="KinematicBody2D"]
+material = SubResource( 1 )
 position = Vector2( 0, -1 )
 collision_mask = 30
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.0883884, 0 )
 frames = ExtResource( 2 )
 animation = "walk"
-frame = 4
+frame = 2
 playing = true
 
 [node name="monstarcar" type="Sprite" parent="."]
 visible = false
-position = Vector2( 4.92336, -3.78577 )
-scale = Vector2( 1, 0.680748 )
+position = Vector2( 0.790071, 4.46962 )
+scale = Vector2( 0.496032, 0.361136 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.119271, 7.22524 )
-shape = SubResource( 1 )
+position = Vector2( 0.0889404, 4.42499 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
-limit_bottom = 700
 smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
@@ -54,6 +68,24 @@ stream = ExtResource( 3 )
 [node name="aim" type="Position2D" parent="turn"]
 position = Vector2( 23.992, 9.34 )
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="turn/aim"]
+position = Vector2( 6.117, -4.701 )
+emitting = false
+amount = 18
+one_shot = true
+speed_scale = 3.19
+explosiveness = 0.6
+randomness = 0.39
+lifetime_randomness = 0.36
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+linear_accel_curve = SubResource( 3 )
+scale_amount_curve = SubResource( 4 )
+color_ramp = SubResource( 5 )
+
+[node name="gunshot" type="Timer" parent="turn/aim/CPUParticles2D"]
+wait_time = 0.3
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthBar2" type="ProgressBar" parent="CanvasLayer"]
@@ -61,8 +93,8 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 289.0
 margin_bottom = 49.0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 3 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
 value = 100.0
 percent_visible = false
 __meta__ = {
@@ -70,12 +102,15 @@ __meta__ = {
 }
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 0.420448
-margin_right = 0.42041
+margin_left = 0.197723
+margin_top = -0.46817
+margin_right = 0.197632
+margin_bottom = -0.46814
 
 [node name="Health2" type="Node" parent="."]
 script = ExtResource( 5 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+[connection signal="timeout" from="turn/aim/CPUParticles2D/gunshot" to="." method="_on_gunshot_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,41 +1,37 @@
-[gd_resource type="SpriteFrames" load_steps=12 format=2]
+[gd_resource type="SpriteFrames" load_steps=8 format=2]
 
-[ext_resource path="res://Assest/player-sprites/player1/tile008.png" type="Texture" id=2]
-[ext_resource path="res://Assest/player-sprites/player1/tile009.png" type="Texture" id=3]
-[ext_resource path="res://Assest/player-sprites/player1/tile010.png" type="Texture" id=4]
-[ext_resource path="res://Assest/player-sprites/platformChar_climb1.png" type="Texture" id=5]
-[ext_resource path="res://Assest/player-sprites/platformChar_climb2.png" type="Texture" id=6]
-[ext_resource path="res://Assest/player-sprites/platformChar_duck.png" type="Texture" id=7]
-[ext_resource path="res://Assest/player-sprites/player1/tile011.png" type="Texture" id=8]
-[ext_resource path="res://Assest/player-sprites/player1/tile012.png" type="Texture" id=9]
-[ext_resource path="res://Assest/player-sprites/player1/tile013.png" type="Texture" id=10]
-[ext_resource path="res://Assest/player-sprites/player1/tile026.png" type="Texture" id=11]
-[ext_resource path="res://Assest/player-sprites/player1/tile025.png" type="Texture" id=12]
+[ext_resource path="res://Assest/player-sprites/player1/tile147.png" type="Texture" id=2]
+[ext_resource path="res://Assest/player-sprites/player1/tile149.png" type="Texture" id=3]
+[ext_resource path="res://Assest/player-sprites/player1/tile150.png" type="Texture" id=4]
+[ext_resource path="res://Assest/player-sprites/player1/tile146.png" type="Texture" id=9]
+[ext_resource path="res://Assest/player-sprites/player1/tile143.png" type="Texture" id=10]
+[ext_resource path="res://Assest/player-sprites/player1/tile145.png" type="Texture" id=13]
+[ext_resource path="res://Assest/player-sprites/player1/tile151.png" type="Texture" id=15]
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [  ],
 "loop": true,
 "name": "climb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "idel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]

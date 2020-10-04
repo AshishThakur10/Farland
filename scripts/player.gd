@@ -1,6 +1,7 @@
 extends KinematicBody2D
-var bullet = preload("res://scenes/Instance/bullet.tscn")
+const bullet = preload("res://scenes/Instance/bullet.tscn")
 
+onready var sprite =$AnimatedSprite
 var velocity = Vector2(0,0)
 var Gravity= 18
 var Speed = 300
@@ -9,27 +10,29 @@ var coin = 0
 var current
 var max_hp = 100
 var car = true
-
+var BULLET_VELOCITY = 400
 func _ready():
 	current = max_hp
 
 func  _physics_process(delta):
-	Shoot()
+	
 	player_movemen() 
 	jump()
 	monstarcar()
 
 func player_movemen():
+	if Input.is_action_just_pressed("Fire"):
+		Shoot()
 	if Input.is_action_pressed("ui_left"):
-		
+		GLOBAL.direction = -1
 		velocity.x = -Speed
 		$AnimatedSprite.flip_h = true
 		$turn.rotation_degrees = 180
 		$AnimatedSprite.play("walk")
-#		$turn.set_rotation_degrees(180)
+
 
 	elif Input.is_action_pressed("ui_right"):
-		
+		GLOBAL.direction = 1
 		velocity.x = Speed
 		$turn.rotation_degrees = 0
 		$AnimatedSprite.flip_h = false
@@ -78,10 +81,11 @@ func ouch(var enemyposx,damage):
 
 func Shoot():
 	var bullet_instance = bullet.instance()
-	if Input.is_action_just_pressed("Fire"):
-		print('fire')
-		bullet_instance.position = $turn/aim.get_global_position()
-		get_parent().add_child(bullet_instance)
+	$turn/aim/CPUParticles2D.set_emitting(true)
+	$turn/aim/CPUParticles2D/gunshot.start()
+	
+	bullet_instance.position = $turn/aim.get_global_position()
+	get_parent().add_child(bullet_instance)
 	pass
 
 func monstarcar():
@@ -106,3 +110,8 @@ func die():
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
 	pass 
+
+
+func _on_gunshot_timeout():
+#	$CPUParticles2D.set_emitting(false)
+	pass # Replace with function body.
