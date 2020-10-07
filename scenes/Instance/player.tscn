@@ -40,7 +40,7 @@ script = ExtResource( 1 )
 position = Vector2( -0.0883884, 0 )
 frames = ExtResource( 2 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="monstarcar" type="Sprite" parent="."]

@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="fallzone" type="Area2D"]
+collision_layer = 4

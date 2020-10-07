@@ -1,21 +1,23 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=2]
+[gd_resource type="SpriteFrames" load_steps=10 format=2]
 
-[ext_resource path="res://Assest/player-sprites/player1/tile147.png" type="Texture" id=2]
-[ext_resource path="res://Assest/player-sprites/player1/tile149.png" type="Texture" id=3]
-[ext_resource path="res://Assest/player-sprites/player1/tile150.png" type="Texture" id=4]
-[ext_resource path="res://Assest/player-sprites/player1/tile146.png" type="Texture" id=9]
-[ext_resource path="res://Assest/player-sprites/player1/tile143.png" type="Texture" id=10]
-[ext_resource path="res://Assest/player-sprites/player1/tile145.png" type="Texture" id=13]
-[ext_resource path="res://Assest/player-sprites/player1/tile151.png" type="Texture" id=15]
+[ext_resource path="res://Assest/player-sprites/walk/tile145.png" type="Texture" id=1]
+[ext_resource path="res://Assest/player-sprites/walk/tile150.png" type="Texture" id=2]
+[ext_resource path="res://Assest/player-sprites/walk/tile144.png" type="Texture" id=3]
+[ext_resource path="res://Assest/player-sprites/walk/tile148.png" type="Texture" id=4]
+[ext_resource path="res://Assest/player-sprites/walk/tile149.png" type="Texture" id=5]
+[ext_resource path="res://Assest/player-sprites/walk/tile143.png" type="Texture" id=6]
+[ext_resource path="res://Assest/player-sprites/walk/tile146.png" type="Texture" id=7]
+[ext_resource path="res://Assest/player-sprites/walk/tile147.png" type="Texture" id=8]
+[ext_resource path="res://Assest/player-sprites/walk/tile151.png" type="Texture" id=9]
 
 [resource]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "climb",
+"name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -25,13 +27,18 @@ animations = [ {
 "name": "crouch",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [  ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "idel",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [  ],
 "loop": true,
-"name": "jump",
+"name": "shoot",
 "speed": 5.0
 } ]
