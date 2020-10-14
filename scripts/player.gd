@@ -84,7 +84,7 @@ func Shoot():
 	$turn/aim/CPUParticles2D.set_emitting(true)
 	$turn/aim/CPUParticles2D/gunshot.start()
 	$AnimatedSprite.play('shoot')
-	
+	$SoundShoot.play()
 	bullet_instance.position = $turn/aim.get_global_position()
 	get_parent().add_child(bullet_instance)
 	pass

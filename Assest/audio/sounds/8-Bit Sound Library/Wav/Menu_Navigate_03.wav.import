@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Menu_Navigate_03.wav-562501dae0461d5664d668e3f4c5af84.sample"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Wav/Menu_Navigate_03.wav"
+dest_files=[ "res://.import/Menu_Navigate_03.wav-562501dae0461d5664d668e3f4c5af84.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

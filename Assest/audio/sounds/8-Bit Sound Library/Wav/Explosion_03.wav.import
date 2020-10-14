@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion_03.wav-e93f2aaf22ef8fd63407e30561b3e58a.sample"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Wav/Explosion_03.wav"
+dest_files=[ "res://.import/Explosion_03.wav-e93f2aaf22ef8fd63407e30561b3e58a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

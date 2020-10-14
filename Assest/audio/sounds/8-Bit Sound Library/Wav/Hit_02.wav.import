@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_02.wav-1677818d456b5d01cc626d0411fc2aad.sample"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Wav/Hit_02.wav"
+dest_files=[ "res://.import/Hit_02.wav-1677818d456b5d01cc626d0411fc2aad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

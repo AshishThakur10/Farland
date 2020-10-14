@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/UI/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Assest/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assest/audio/music/Swinging Pants.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assest/background/PNG/game_background_4/game_background_4.png" type="Texture" id=4]
+[ext_resource path="res://scenes/UI/MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://Assest/ayush/12024726882.jpeg" type="Texture" id=6]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -32,14 +34,27 @@ font_data = ExtResource( 2 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 margin_right = 1026.0
 margin_bottom = 607.0
 texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 19.122
+margin_top = 18.1956
+margin_right = 1045.12
+margin_bottom = 654.195
+texture = ExtResource( 6 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -66,10 +81,10 @@ anchor_left = 0.348
 anchor_top = 0.427
 anchor_right = 0.656
 anchor_bottom = 0.616
-margin_left = -3.94119
-margin_top = 11.4556
-margin_right = -4.33319
-margin_bottom = -0.944458
+margin_left = -24.6836
+margin_top = 214.863
+margin_right = -25.0756
+margin_bottom = 202.463
 custom_fonts/font = SubResource( 3 )
 text = "Play"
 flat = true
@@ -83,10 +98,10 @@ anchor_left = 0.348
 anchor_top = 0.427
 anchor_right = 0.656
 anchor_bottom = 0.616
-margin_left = 59.2159
-margin_top = 155.205
-margin_right = -74.1761
-margin_bottom = 143.805
+margin_left = -223.77
+margin_top = 196.585
+margin_right = -357.162
+margin_bottom = 185.185
 custom_fonts/font = SubResource( 4 )
 text = "Level"
 flat = true
@@ -110,5 +125,50 @@ __meta__ = {
 stream = ExtResource( 3 )
 volume_db = -6.71
 autoplay = true
+bus = "Musice"
+
+[node name="Musice" type="Label" parent="."]
+margin_left = 747.915
+margin_top = 507.612
+margin_right = 793.915
+margin_bottom = 521.612
+text = "Musice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musiceVolume" type="HSlider" parent="Musice"]
+margin_left = 63.0594
+margin_top = -27.7621
+margin_right = 257.059
+margin_bottom = 46.2379
+min_value = -80.0
+max_value = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Label" parent="."]
+margin_left = 750.0
+margin_top = 549.0
+margin_right = 789.0
+margin_bottom = 563.0
+text = "Sound"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="soundVolume" type="HSlider" parent="Sound"]
+margin_left = 58.0
+margin_top = -33.0
+margin_right = 253.0
+margin_bottom = 40.0
+min_value = -80.0
+max_value = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Levels" to="StartButton" method="_on_Levels_pressed"]
+[connection signal="value_changed" from="Musice/musiceVolume" to="." method="_on_musiceVolume_value_changed"]
+[connection signal="value_changed" from="Sound/soundVolume" to="." method="_on_soundVolume_value_changed"]

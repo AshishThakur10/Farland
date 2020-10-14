@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/stepstone_3.wav-8a57d4ec0023314fac675e210054c24e.sample"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/jute-dh-steps/stepstone_3.wav"
+dest_files=[ "res://.import/stepstone_3.wav-8a57d4ec0023314fac675e210054c24e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

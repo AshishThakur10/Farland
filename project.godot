@@ -24,6 +24,7 @@ config/windows_native_icon="res://icon.png"
 [autoload]
 
 GLOBAL="*res://scripts/Objects/GLOBAL.gd"
+AUDIO="*res://scenes/UI/AUDIO.tscn"
 
 [display]
 

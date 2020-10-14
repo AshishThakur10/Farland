@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Assest/player-sprites/player-sprite.tres" type="SpriteFrames" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/UI/TouchControl.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/Objects/Health.gd" type="Script" id=5]
 [ext_resource path="res://Assest/objects/monstarcar.png" type="Texture" id=6]
+[ext_resource path="res://Assest/audio/sounds/minimize_001.ogg" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -62,6 +63,15 @@ editor_draw_drag_margin = true
 
 [node name="SoundJump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="SoundWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="SoundShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "SFX"
 
 [node name="turn" type="Position2D" parent="."]
 

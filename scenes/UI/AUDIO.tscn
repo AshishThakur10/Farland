@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assest/audio/sounds/switch23.ogg" type="AudioStream" id=1]
+
+[node name="AUDIO" type="Node"]
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = 3.871
+bus = "SFX"
+
+[node name="shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = 3.871
+bus = "SFX"

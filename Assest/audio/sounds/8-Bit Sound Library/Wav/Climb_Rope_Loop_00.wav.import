@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Climb_Rope_Loop_00.wav-f9f51ff4999cc8b95f5d8483974f7af1.sample"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Wav/Climb_Rope_Loop_00.wav"
+dest_files=[ "res://.import/Climb_Rope_Loop_00.wav-f9f51ff4999cc8b95f5d8483974f7af1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
