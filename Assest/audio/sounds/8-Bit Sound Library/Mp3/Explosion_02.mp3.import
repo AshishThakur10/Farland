@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Explosion_02.mp3-983df38d9714fb4329be62537c12a32c.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Explosion_02.mp3"
+dest_files=[ "res://.import/Explosion_02.mp3-983df38d9714fb4329be62537c12a32c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

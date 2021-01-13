@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jingle_Win_01.mp3-04a4c1ec1d3dee54e065451e96042fb3.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Jingle_Win_01.mp3"
+dest_files=[ "res://.import/Jingle_Win_01.mp3-04a4c1ec1d3dee54e065451e96042fb3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

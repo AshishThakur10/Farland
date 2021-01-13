@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jingle_Lose_00.mp3-56c526d9bede2a35f392a175cd92e4d1.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Jingle_Lose_00.mp3"
+dest_files=[ "res://.import/Jingle_Lose_00.mp3-56c526d9bede2a35f392a175cd92e4d1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

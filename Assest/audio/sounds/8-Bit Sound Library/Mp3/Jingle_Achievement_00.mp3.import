@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jingle_Achievement_00.mp3-5d7894f35c3abb164045decb594e71c0.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Jingle_Achievement_00.mp3"
+dest_files=[ "res://.import/Jingle_Achievement_00.mp3-5d7894f35c3abb164045decb594e71c0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

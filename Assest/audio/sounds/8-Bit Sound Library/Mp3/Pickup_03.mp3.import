@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pickup_03.mp3-e13efa59ba48680e33115e3122eb1870.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Pickup_03.mp3"
+dest_files=[ "res://.import/Pickup_03.mp3-e13efa59ba48680e33115e3122eb1870.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

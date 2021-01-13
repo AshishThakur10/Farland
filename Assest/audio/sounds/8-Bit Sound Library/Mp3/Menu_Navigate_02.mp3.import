@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu_Navigate_02.mp3-4726632d41ef2845434868ab07f7058e.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Menu_Navigate_02.mp3"
+dest_files=[ "res://.import/Menu_Navigate_02.mp3-4726632d41ef2845434868ab07f7058e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

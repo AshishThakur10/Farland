@@ -50,10 +50,14 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 19.122
-margin_top = 18.1956
-margin_right = 1045.12
-margin_bottom = 654.195
+anchor_left = 0.0546875
+anchor_top = -0.135
+anchor_right = 0.0546875
+anchor_bottom = -0.135
+margin_left = -41.4591
+margin_top = 71.6496
+margin_right = 984.539
+margin_bottom = 707.649
 texture = ExtResource( 6 )
 expand = true
 __meta__ = {
@@ -168,6 +172,7 @@ max_value = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Levels" to="StartButton" method="_on_Levels_pressed"]
 [connection signal="value_changed" from="Musice/musiceVolume" to="." method="_on_musiceVolume_value_changed"]

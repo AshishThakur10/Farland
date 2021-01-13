@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hero_Death_00.mp3-2805538103797af551f0d837eeafd639.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Hero_Death_00.mp3"
+dest_files=[ "res://.import/Hero_Death_00.mp3-2805538103797af551f0d837eeafd639.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

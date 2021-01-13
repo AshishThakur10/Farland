@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jump_00.mp3-9a826020453573102fbaec3bfe3ebcfa.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Jump_00.mp3"
+dest_files=[ "res://.import/Jump_00.mp3-9a826020453573102fbaec3bfe3ebcfa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

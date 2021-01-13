@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Climb_Rope_Loop_00.mp3-dd9c997e9ed7f277ee14c68ae99a40f1.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Climb_Rope_Loop_00.mp3"
+dest_files=[ "res://.import/Climb_Rope_Loop_00.mp3-dd9c997e9ed7f277ee14c68ae99a40f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

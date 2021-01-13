@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hit_00.mp3-55ed4033b35c6ead5b7c20da5641243e.mp3str"
+
+[deps]
+
+source_file="res://Assest/audio/sounds/8-Bit Sound Library/Mp3/Hit_00.mp3"
+dest_files=[ "res://.import/Hit_00.mp3-55ed4033b35c6ead5b7c20da5641243e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
