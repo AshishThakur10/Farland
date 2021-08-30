@@ -40,9 +40,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-margin_right = 1026.0
-margin_bottom = 607.0
+margin_left = 42.064
+margin_top = 77.2223
+margin_right = 1068.06
+margin_bottom = 684.222
 texture = ExtResource( 4 )
 expand = true
 __meta__ = {
@@ -50,6 +51,7 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 anchor_left = 0.0546875
 anchor_top = -0.135
 anchor_right = 0.0546875
@@ -67,8 +69,10 @@ __meta__ = {
 [node name="Title" type="Label" parent="."]
 material = SubResource( 1 )
 anchor_right = 1.0
-margin_top = 36.9098
-margin_bottom = 138.91
+margin_left = 53.8067
+margin_top = 147.245
+margin_right = 53.8066
+margin_bottom = 277.245
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.780392, 0.831373, 0.894118, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -85,10 +89,10 @@ anchor_left = 0.348
 anchor_top = 0.427
 anchor_right = 0.656
 anchor_bottom = 0.616
-margin_left = -24.6836
-margin_top = 214.863
-margin_right = -25.0756
-margin_bottom = 202.463
+margin_left = 86.3983
+margin_top = 35.1278
+margin_right = 86.0063
+margin_bottom = 22.7278
 custom_fonts/font = SubResource( 3 )
 text = "Play"
 flat = true
@@ -102,10 +106,10 @@ anchor_left = 0.348
 anchor_top = 0.427
 anchor_right = 0.656
 anchor_bottom = 0.616
-margin_left = -223.77
-margin_top = 196.585
-margin_right = -357.162
-margin_bottom = 185.185
+margin_left = 154.4
+margin_top = 180.451
+margin_right = 21.0084
+margin_bottom = 169.051
 custom_fonts/font = SubResource( 4 )
 text = "Level"
 flat = true
@@ -142,10 +146,14 @@ __meta__ = {
 }
 
 [node name="musiceVolume" type="HSlider" parent="Musice"]
-margin_left = 63.0594
-margin_top = -27.7621
-margin_right = 257.059
-margin_bottom = 46.2379
+anchor_left = 0.945
+anchor_top = -2.492
+anchor_right = 0.945
+anchor_bottom = -2.492
+margin_left = 18.3237
+margin_top = 33.6959
+margin_right = 211.324
+margin_bottom = 49.6959
 min_value = -80.0
 max_value = 0.0
 __meta__ = {
@@ -163,10 +171,10 @@ __meta__ = {
 }
 
 [node name="soundVolume" type="HSlider" parent="Sound"]
-margin_left = 58.0
-margin_top = -33.0
-margin_right = 253.0
-margin_bottom = 40.0
+margin_left = 59.7622
+margin_top = -3.40155
+margin_right = 254.762
+margin_bottom = 12.5984
 min_value = -80.0
 max_value = 0.0
 __meta__ = {

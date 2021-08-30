@@ -538,6 +538,7 @@ position = Vector2( 10000, 144 )
 
 [node name="enemy21" parent="enemies" instance=ExtResource( 7 )]
 position = Vector2( 10296, 136 )
+
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]
 
 [editable path="fallzone"]
