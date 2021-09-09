@@ -326,4 +326,5 @@ nextlevel = "res://scenes/Levels/Level3.tscn"
 position = Vector2( 2665.75, 432.533 )
 scale = Vector2( 1.42722, 0.841972 )
 texture = ExtResource( 20 )
+
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]

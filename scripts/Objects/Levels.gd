@@ -24,4 +24,7 @@ func _on_level5_pressed():
 	get_tree().change_scene("res://scenes/Levels/Level5.tscn") #
 
 func _on_level6_pressed():
-	get_tree().change_scene("res://scenes/Levels/Level6.tscn") #
+	get_tree().change_scene("res://scenes/Levels/Level6.tscn") 
+
+func _on_level7_pressed():
+	get_tree().change_scene("res://scenes/Levels/Level7.tscn") 

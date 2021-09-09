@@ -279,6 +279,7 @@ autoplay = true
 
 [node name="nextLevel" parent="." instance=ExtResource( 20 )]
 position = Vector2( 11989.8, 1838.7 )
+
 [connection signal="coin_collected" from="Coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]

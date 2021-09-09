@@ -323,6 +323,7 @@ position = Vector2( 7770.13, 413.718 )
 nextlevel = "res://scenes/Levels/Level4.tscn"
 
 [node name="HUD2" parent="." instance=ExtResource( 21 )]
+
 [connection signal="coin_collected" from="Coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]

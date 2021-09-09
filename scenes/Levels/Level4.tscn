@@ -320,6 +320,7 @@ autoplay = true
 [node name="nextLevel" parent="." instance=ExtResource( 20 )]
 position = Vector2( 7791.17, 373.942 )
 nextlevel = "res://scenes/Levels/Level5.tscn"
+
 [connection signal="coin_collected" from="Coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]

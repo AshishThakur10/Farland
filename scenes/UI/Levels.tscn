@@ -133,6 +133,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="level7" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -282.978
+margin_top = -576.714
+margin_right = -28.9781
+margin_bottom = -434.714
+custom_fonts/font = ExtResource( 2 )
+text = "Level 7"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Main_Manu" type="Button" parent="."]
 margin_right = 131.0
 margin_bottom = 39.0
@@ -146,10 +162,13 @@ __meta__ = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 bus = "Musice"
+
 [connection signal="pressed" from="level1" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="level3" to="." method="_on_level3_pressed"]
 [connection signal="pressed" from="level4" to="." method="_on_level4_pressed"]
 [connection signal="pressed" from="level5" to="." method="_on_level5_pressed"]
 [connection signal="pressed" from="level6" to="." method="_on_level6_pressed"]
+[connection signal="pressed" from="level7" to="." method="_on_level7_pressed"]
+[connection signal="pressed" from="level7" to="." method="_on_level6_pressed"]
 [connection signal="pressed" from="Main_Manu" to="." method="_on_Main_Manu_pressed"]

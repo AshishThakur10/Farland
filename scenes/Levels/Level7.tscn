@@ -1,13 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assest/WorldTiles/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Instance/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assest/ayush/photos/CYMERA_20190325_114304.jpg" type="Texture" id=3]
-[ext_resource path="res://Assest/ayush/photos/IMG20170117154258.jpg" type="Texture" id=4]
-[ext_resource path="res://Assest/ayush/photos/IMG20170117160911.jpg" type="Texture" id=5]
-[ext_resource path="res://Assest/ayush/photos/IMG20170416131903.jpg" type="Texture" id=6]
 [ext_resource path="res://scenes/Instance/massage.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assest/ayush/photos/IMG20170417203848.jpg" type="Texture" id=8]
 [ext_resource path="res://scenes/Instance/enemy.tscn" type="PackedScene" id=10]
 
 [node name="HBDayush" type="Node2D"]
@@ -37,7 +33,6 @@ margin_top = 511.0
 margin_right = 1845.0
 margin_bottom = 608.0
 rect_rotation = -90.5448
-texture = ExtResource( 4 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -50,7 +45,6 @@ margin_top = 216.0
 margin_right = 2543.0
 margin_bottom = 526.0
 rect_rotation = -0.31759
-texture = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -63,7 +57,6 @@ margin_top = 194.786
 margin_right = 3296.59
 margin_bottom = 514.786
 rect_rotation = -0.651095
-texture = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -76,7 +69,6 @@ margin_top = 246.592
 margin_right = 4097.53
 margin_bottom = 566.592
 rect_rotation = -0.651095
-texture = ExtResource( 8 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -89,7 +81,6 @@ margin_top = 371.318
 margin_right = 5091.77
 margin_bottom = 691.318
 rect_rotation = -0.651095
-texture = ExtResource( 8 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -111,10 +102,11 @@ position = Vector2( 1255.96, 442.645 )
 
 [node name="Label" parent="massage" index="1"]
 visible = true
-margin_left = 967.138
-margin_top = 328.394
-margin_right = 1510.14
-margin_bottom = 451.394
+margin_left = 967.0
+margin_top = 328.0
+margin_right = 1170.0
+margin_bottom = 388.0
+text = "welcome"
 
 [node name="enemies" type="Node2D" parent="."]
 

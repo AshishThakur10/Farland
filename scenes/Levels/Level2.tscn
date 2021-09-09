@@ -274,4 +274,5 @@ __meta__ = {
 [node name="Smoke" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4480, 760 )
 emitting = true
+
 [connection signal="body_entered" from="fallzone" to="player" method="_on_fallzone_body_entered"]
