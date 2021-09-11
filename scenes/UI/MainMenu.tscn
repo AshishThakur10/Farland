@@ -5,7 +5,6 @@
 [ext_resource path="res://Assest/audio/music/Swinging Pants.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assest/background/PNG/game_background_4/game_background_4.png" type="Texture" id=4]
 [ext_resource path="res://scenes/UI/MainMenu.gd" type="Script" id=5]
-[ext_resource path="res://Assest/ayush/12024726882.jpeg" type="Texture" id=6]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -31,6 +30,10 @@ font_data = ExtResource( 2 )
 size = 25
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 2 )
+
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -40,25 +43,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -1.25992
 margin_right = 1023.11
-margin_bottom = 603.313
+margin_bottom = 602.053
 texture = ExtResource( 4 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-anchor_left = 0.0546875
-anchor_top = -0.135
-anchor_right = 0.0546875
-anchor_bottom = -0.135
-margin_left = -41.4591
-margin_top = 71.6496
-margin_right = 984.539
-margin_bottom = 707.649
-texture = ExtResource( 6 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -87,11 +75,12 @@ anchor_left = 0.348
 anchor_top = 0.427
 anchor_right = 0.656
 anchor_bottom = 0.616
-margin_left = 5.15338
-margin_top = 2.08099
-margin_right = 4.76135
-margin_bottom = -10.3189
+margin_left = 0.536072
+margin_top = 4.7337
+margin_right = 0.144043
+margin_bottom = -7.66617
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.996078, 0.996078, 0.996078, 1 )
 text = "Play"
 flat = true
 script = ExtResource( 1 )
@@ -175,6 +164,18 @@ margin_right = 254.762
 margin_bottom = 12.5984
 min_value = -80.0
 max_value = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="about" type="Button" parent="."]
+margin_left = 47.9469
+margin_top = 451.092
+margin_right = 139.947
+margin_bottom = 493.092
+custom_fonts/font = SubResource( 6 )
+text = "About"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
