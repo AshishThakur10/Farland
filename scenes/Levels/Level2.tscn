@@ -253,6 +253,9 @@ position = Vector2( 14678.5, 214.371 )
 [node name="enemy12" parent="enemies" instance=ExtResource( 18 )]
 position = Vector2( 14822, 221.922 )
 
+[node name="enemy13" parent="enemies" instance=ExtResource( 18 )]
+position = Vector2( 6591.55, 492.829 )
+
 [node name="MusiceLevel1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 volume_db = -8.387

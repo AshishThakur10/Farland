@@ -1,21 +1,21 @@
 extends KinematicBody2D
-const bullet = preload("res://scenes/Instance/bullet.tscn")
+const bullet = preload("res://scenes/Instance/bullet.tscn") 
 
 onready var sprite =$AnimatedSprite
 var velocity = Vector2(0,0)
 var Gravity= 18
 var Speed = 300
-var jumpforce = 700
+var jumpforce = 700  #need improvement
 var coin = 0
 var current
 var max_hp = 100
 var car = true
 var BULLET_VELOCITY = 400
+
 func _ready():
 	current = max_hp
 
 func  _physics_process(delta):
-	
 	player_movemen() 
 	jump()
 	monstarcar()
@@ -89,21 +89,19 @@ func Shoot():
 	get_parent().add_child(bullet_instance)
 	pass
 
-func monstarcar():
+func monstarcar(): # car
 	if Input.is_action_just_pressed("ui_accept"):
 		car = true
-		$monstarcar.set_visible(car) 
+		$monstarcar.set_visible(car)
 	if Input.is_action_just_pressed("ui_cancel"):
 		car = false
 		$monstarcar.set_visible(car)
 
 func _on_Health_depleted():
-	
-	
 	die()
 	pass 
+
 func die():
-	
 	queue_free()
 	pass
 
